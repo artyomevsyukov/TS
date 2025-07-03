@@ -34,3 +34,53 @@
 
 // const n: keyOfUser = "name"
 // console.log(n)
+
+// interface DiscountStrategy {
+//   getDiscount(): number
+// }
+
+// class VIPDiscount implements DiscountStrategy {
+//   getDiscount() {
+//     return 20
+//   }
+// }
+
+// class PremiumDiscount implements DiscountStrategy {
+//   getDiscount() {
+//     return 30
+//   }
+// }
+
+// class Discount {
+//   constructor(private strategy: DiscountStrategy) {}
+
+//   giveDiscount() {
+//     return this.strategy.getDiscount()
+//   }
+// }
+
+// const userVip = new Discount(new VIPDiscount())
+// console.log(userVip.giveDiscount())
+// const userPremium = new Discount(new PremiumDiscount())
+// console.log(userPremium.giveDiscount())
+class Animal {
+  constructor(public name: string) {}
+
+  makeSound(): void {
+    console.log("Some generic sound")
+  }
+}
+
+class Dog extends Animal {
+  makeSound(): void {
+    console.log("Гав-гав!")
+  }
+
+  fetch(): void {
+    console.log(`${this.name} принес палку!`)
+  }
+}
+
+const dog = new Dog("Бобик")
+dog.makeSound() // "Гав-гав!"
+dog.fetch() // "Бобик принес палку!"

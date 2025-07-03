@@ -7,6 +7,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 class UserService {
+    constructor() {
+        // private _users: number = 0
+        this._users = 0;
+    }
     set users(num) {
         this._users = num;
     }

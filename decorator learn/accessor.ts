@@ -5,7 +5,7 @@ interface IUserService {
 
 class UserService implements IUserService {
   // private _users: number = 0
-  private _users: number
+  private _users: number = 0
 
   @Log()
   set users(num: number) {
