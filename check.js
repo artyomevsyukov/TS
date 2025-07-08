@@ -5,6 +5,7 @@
 // interface Bird {
 //   fly(): void
 // }
+Object.defineProperty(exports, "__esModule", { value: true });
 // interface Fish {
 //   swim(): void
 // }

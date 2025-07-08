@@ -84,3 +84,5 @@ class Dog extends Animal {
 const dog = new Dog("Бобик")
 dog.makeSound() // "Гав-гав!"
 dog.fetch() // "Бобик принес палку!"
+
+export {}

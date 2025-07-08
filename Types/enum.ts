@@ -67,3 +67,5 @@ async function getFaqs(req: {
   const data = await res.json()
   return data
 }
+
+export {}
