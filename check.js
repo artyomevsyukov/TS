@@ -1,11 +1,23 @@
 "use strict";
+var StatusCode;
+(function (StatusCode) {
+    StatusCode["SUCCESS"] = "s";
+    StatusCode["IN_PROCESS"] = "p";
+    StatusCode["FAILED"] = "f";
+    // SUCCESS = 1,
+    // IN_PROCESS = 2,
+    // FAILED = 3,
+})(StatusCode || (StatusCode = {}));
+function action(status) { }
+// action(StatusCode.IN_PROCESS)
+// action(1)
+// action("p")
 // interface Animal {
 //   name: string
 // }
 // interface Bird {
 //   fly(): void
 // }
-Object.defineProperty(exports, "__esModule", { value: true });
 // interface Fish {
 //   swim(): void
 // }
@@ -52,22 +64,21 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // console.log(userVip.giveDiscount())
 // const userPremium = new Discount(new PremiumDiscount())
 // console.log(userPremium.giveDiscount())
-class Animal {
-    constructor(name) {
-        this.name = name;
-    }
-    makeSound() {
-        console.log("Some generic sound");
-    }
-}
-class Dog extends Animal {
-    makeSound() {
-        console.log("Гав-гав!");
-    }
-    fetch() {
-        console.log(`${this.name} принес палку!`);
-    }
-}
-const dog = new Dog("Бобик");
-dog.makeSound(); // "Гав-гав!"
-dog.fetch(); // "Бобик принес палку!"
+// class Animal {
+//   constructor(public name: string) {}
+//   makeSound(): void {
+//     console.log("Some generic sound")
+//   }
+// }
+// class Dog extends Animal {
+//   makeSound(): void {
+//     console.log("Гав-гав!")
+//   }
+//   fetch(): void {
+//     console.log(`${this.name} принес палку!`)
+//   }
+// }
+// const dog = new Dog("Бобик")
+// dog.makeSound() // "Гав-гав!"
+// dog.fetch() // "Бобик принес палку!"
+// export {}

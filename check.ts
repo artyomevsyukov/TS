@@ -1,3 +1,18 @@
+enum StatusCode {
+  SUCCESS = "s",
+  IN_PROCESS = "p",
+  FAILED = "f",
+  // SUCCESS = 1,
+  // IN_PROCESS = 2,
+  // FAILED = 3,
+}
+
+function action(status: StatusCode) {}
+
+// action(StatusCode.IN_PROCESS)
+// action(1)
+// action("p")
+
 // interface Animal {
 //   name: string
 // }
@@ -63,26 +78,26 @@
 // console.log(userVip.giveDiscount())
 // const userPremium = new Discount(new PremiumDiscount())
 // console.log(userPremium.giveDiscount())
-class Animal {
-  constructor(public name: string) {}
+// class Animal {
+//   constructor(public name: string) {}
 
-  makeSound(): void {
-    console.log("Some generic sound")
-  }
-}
+//   makeSound(): void {
+//     console.log("Some generic sound")
+//   }
+// }
 
-class Dog extends Animal {
-  makeSound(): void {
-    console.log("Гав-гав!")
-  }
+// class Dog extends Animal {
+//   makeSound(): void {
+//     console.log("Гав-гав!")
+//   }
 
-  fetch(): void {
-    console.log(`${this.name} принес палку!`)
-  }
-}
+//   fetch(): void {
+//     console.log(`${this.name} принес палку!`)
+//   }
+// }
 
-const dog = new Dog("Бобик")
-dog.makeSound() // "Гав-гав!"
-dog.fetch() // "Бобик принес палку!"
+// const dog = new Dog("Бобик")
+// dog.makeSound() // "Гав-гав!"
+// dog.fetch() // "Бобик принес палку!"
 
-export {}
+// export {}
