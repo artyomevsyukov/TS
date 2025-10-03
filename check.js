@@ -1,14 +1,13 @@
 "use strict";
-var StatusCode;
-(function (StatusCode) {
-    StatusCode["SUCCESS"] = "s";
-    StatusCode["IN_PROCESS"] = "p";
-    StatusCode["FAILED"] = "f";
-    // SUCCESS = 1,
-    // IN_PROCESS = 2,
-    // FAILED = 3,
-})(StatusCode || (StatusCode = {}));
-function action(status) { }
+// enum StatusCode {
+//   SUCCESS = "s",
+//   IN_PROCESS = "p",
+//   FAILED = "f",
+//   // SUCCESS = 1,
+//   // IN_PROCESS = 2,
+//   // FAILED = 3,
+// }
+// function action(status: StatusCode) {}
 // action(StatusCode.IN_PROCESS)
 // action(1)
 // action("p")
@@ -82,3 +81,48 @@ function action(status) { }
 // dog.makeSound() // "Гав-гав!"
 // dog.fetch() // "Бобик принес палку!"
 // export {}
+// class Car {
+//   public make: string
+//   private damages: string[]
+//   private _model: string
+//   protected run: number
+//   #price: number
+//   set Model(m: string) {
+//     this._model = m
+//     this.#price = 1000
+//   }
+//   get model() {
+//     return this._model
+//   }
+//   // constructor(make: string) {
+//   //   this.make = make
+//   // }
+// }
+// // const car = new Car("AUDI")
+// car.make = "BMW"
+// console.log(car)
+// class Truck extends Car {
+//   setRun(km: number) {
+//     this.run = km / 0.62
+//   }
+// }
+const data = [
+    { id: 317, name: "Вика" },
+    { id: 1, name: "Катя" },
+    { id: 2, name: "Маша" },
+    { id: 23, name: "Яна" },
+    { id: 3, name: "Настя" },
+];
+function sortArr(data, type = "asc") {
+    const sortedData = [...data];
+    return sortedData.sort((a, b) => {
+        switch (type) {
+            case "asc":
+                return a.id - b.id;
+            case "desc":
+                return b.id - a.id;
+        }
+    });
+}
+console.log(sortArr(data));
+console.log(sortArr(data, "desc"));
