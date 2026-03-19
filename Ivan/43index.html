@@ -12,10 +12,10 @@
 <body>
 
     <div class="card d-inline-block align-top shadow w-25 p-3 m-5">
-        <form>
+        <form id="form-email">
             <div class="mb-3">
                 <label for="email" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
                 <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
@@ -23,17 +23,17 @@
     </div>
 
     <div class="card d-inline-block shadow w-25 p-3 m-5">
-        <form>
+        <form id="form-post">
             <div class="mb-3">
                 <label for="title" class="form-label">Title</label>
-                <input type="text" class="form-control" id="title">
+                <input type="text" class="form-control" id="title" name="title" value="123">
             </div>
             <div class="mb-3">
                 <label for="text" class="form-label">Put some text</label>
-                <textarea class="form-control" id="text" rows="3"></textarea>
+                <textarea class="form-control" id="text" name="text" rows="3"></textarea>
             </div>
             <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="checkbox">
+                <input type="checkbox" class="form-check-input" id="checkbox" name="checkbox">
                 <label class="form-check-label" for="checkbox">Checked?</label>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
