@@ -52,3 +52,17 @@ function checkAnimalData(animal: Response): AnimalAvailableData | string {
     return `${animal.data}, you can try in ${animal.data.nextUpdateIn}`;
   }
 }
+
+// API
+async function fetchAnimalData(id: string) {
+  const response = await fetch(`/api/animals/${id}`);
+  const data: Response = await response.json();
+
+  const result = checkAnimalData(data);
+
+  if (typeof result === 'string') {
+    console.log('Not available:', result);
+  } else {
+    console.log('Available animal:', result.animal, result.location);
+  }
+}
